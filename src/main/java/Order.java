@@ -2,7 +2,11 @@ import javax.swing.*;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
+
 public class Order {
+
+
+    //Хранение заказа (наименование блюда / количество)
     private final LinkedHashMap<String, Integer> orderItems = new LinkedHashMap<>();
 
     //Конструктор нового заказа
@@ -14,9 +18,11 @@ public class Order {
     public void addItemToOrder(String s) {
         if (orderItems.containsKey(s)) {
             orderItems.put(s, orderItems.get(s) + 1);
+
         } else {
             orderItems.put(s, 1);
         }
+
     }
 
     //удаляет блюдо из заказа

@@ -10,7 +10,9 @@
 4 Реализуйте вывод информации о заказах и общей стоимости каждого заказа.*/
 
 
+
 public class Main {
+
     public static void main(String[] args){
         Gui gui = new Gui();
         gui.start(); //Вывод GUI рограммы

@@ -1,10 +1,15 @@
+import org.apache.log4j.Logger;
+
 import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
+import org.apache.log4j.Logger;
 
 import static javax.swing.ListSelectionModel.SINGLE_SELECTION;
 
 public class Gui {
+    // Инициализация логера
+    private static final Logger log = Logger.getLogger(Order.class);
     private int costOrders = 1;  //Номера заказов
     private static Menu menu;
     private final HashMap<String, Order> orders = new HashMap<>();  //Хранение заказов
@@ -85,6 +90,7 @@ public class Gui {
             if (orderList.isSelectionEmpty()) {
                 JOptionPane.showMessageDialog(null, "Нет заказов для добавления!");
             } else {
+                log.info(String.format("В %s добавлено блюдо %s", orderList.getSelectedValue(), menuList.getSelectedValue()));
                 orders.get(orderList.getSelectedValue()).addItemToOrder(menuList.getSelectedValue());
                 text.setText(orders.get(orderList.getSelectedValue()).printOrderDetails(menu));
             }
@@ -95,6 +101,7 @@ public class Gui {
             if (orderList.isSelectionEmpty()) {
                 JOptionPane.showMessageDialog(null, "Нет заказов для удаления!");
             } else {
+                log.info(String.format("Из %s удалено блюдо %s", orderList.getSelectedValue(), menuList.getSelectedValue()));
                 orders.get(orderList.getSelectedValue()).removeItemFromOrder(menuList.getSelectedValue());
                 text.setText(orders.get(orderList.getSelectedValue()).printOrderDetails(menu));
             }
