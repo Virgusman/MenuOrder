@@ -12,4 +12,5 @@ GUI реализваон с помощью фреймфорка swing.
 ![image](https://github.com/Virgusman/MenuOrder/assets/113599394/dc452717-c1d7-4835-9869-2654257e558d)
 
 Логирование:
+
 ![image](https://github.com/Virgusman/MenuOrder/assets/113599394/617fcb08-8c60-4ad7-8201-89499e77c1f5)
