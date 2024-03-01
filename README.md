@@ -6,3 +6,6 @@
 Проект собран с использованием Maven.
 GUI реализваон с помощью фреймфорка swing.
 Логирование с помощью log4j
+
+
+![image](https://github.com/Virgusman/MenuOrder/assets/113599394/dc452717-c1d7-4835-9869-2654257e558d)
